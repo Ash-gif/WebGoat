@@ -5,14 +5,14 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-jobs:
+  jobs:
   setup:
     name: Repository Setup Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Verify repository structure
+           - name: Verify repository structure
         run: |
           echo "Repository structure verified"
           ls -la
